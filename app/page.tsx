@@ -53,7 +53,7 @@ export default function MizuPage() {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault()
-        const href = (this as HTMLAnchorElement).getAttribute("href")
+        const href = (anchor as HTMLAnchorElement).getAttribute("href")
         if (!href) return
         const target = document.querySelector(href)
         if (target) {
